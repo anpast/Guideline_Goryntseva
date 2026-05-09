@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — photostyle.css
+   Стили для страницы «Фотостиль»
+   ═══════════════════════════════════════════════ */
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.photo-intro {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+.photo-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.photo-intro p:last-child { margin-bottom: 0; }
+
+/* ─── КОЛЛАЖ ─────────────────────────────────── */
+.photo-collage {
+  margin-bottom: 72px;
+}
+.photo-collage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── ТРИ КОЛОНКИ ────────────────────────────── */
+.photo-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+/* Заголовок колонки */
+.photo-col-title {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+/* Лейбл «Допустимы:» / «Не рекомендуется:» */
+.photo-col-label {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Список */
+.photo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.photo-list li {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.65;
+  color: var(--black);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.photo-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--black);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .photo-intro p {
+    font-size: 20px;
+  }
+  .photo-three-cols {
+    gap: 32px;
+  }
+  .photo-col-title {
+    font-size: 24px;
+  }
+  .photo-col-label,
+  .photo-list li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-intro p {
+    font-size: 18px;
+  }
+  .photo-three-cols {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .photo-collage {
+    margin-bottom: 48px;
+  }
+  .photo-col-title {
+    font-size: 22px;
+  }
+  .photo-col-label,
+  .photo-list li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-intro p {
+    font-size: 16px;
+  }
+  .photo-col-title {
+    font-size: 20px;
+  }
+}

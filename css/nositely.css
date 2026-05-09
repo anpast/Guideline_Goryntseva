@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — nositely.css
+   Стили для страницы «Носители»
+   ═══════════════════════════════════════════════ */
+
+/* ─── HERO ───────────────────────────────────── */
+.nosit-hero {
+  margin-left: -80px;
+  margin-right: -80px;
+  width: calc(100% + 160px);
+}
+.nosit-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.nosit-intro {
+  max-width: 780px;
+}
+.nosit-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.nosit-intro p:last-child { margin-bottom: 0; }
+
+/* ─── ЗАГОЛОВОК РАЗДЕЛА ──────────────────────── */
+.nosit-section-title {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--black);
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+
+/* ─── ЭЛЕМЕНТ: ТЕКСТ + КАРТИНКА ──────────────── */
+.nosit-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.nosit-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Текстовый столбец */
+.nosit-item-text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.nosit-item-text p:last-child { margin-bottom: 0; }
+
+/* Картинка */
+.nosit-item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nosit-item-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── ШАБЛОНЫ ПОСТОВ ─────────────────────────── */
+.nosit-posts-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 48px;
+}
+.nosit-posts-intro-col p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.nosit-posts-intro-col p:last-child { margin-bottom: 0; }
+
+/* Сетка постов — 3 колонки с адаптивным переносом */
+.nosit-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.nosit-post-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .nosit-hero {
+    margin-left: -48px;
+    margin-right: -48px;
+    width: calc(100% + 96px);
+  }
+  .nosit-item {
+    gap: 40px;
+  }
+  .nosit-section-title {
+    font-size: 28px;
+  }
+  .nosit-intro p,
+  .nosit-item-text p,
+  .nosit-posts-intro-col p {
+    font-size: 18px;
+  }
+  .nosit-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nosit-hero {
+    margin-left: -28px;
+    margin-right: -28px;
+    width: calc(100% + 56px);
+  }
+  .nosit-item {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+  .nosit-item-img {
+    justify-content: flex-start;
+  }
+  .nosit-posts-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .nosit-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .nosit-section-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .nosit-intro p,
+  .nosit-item-text p,
+  .nosit-posts-intro-col p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosit-hero {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+  .nosit-posts-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}

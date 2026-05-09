@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вешалка — Цветовая палитра</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/color.css" />
+</head>
+<body>
+
+<!-- ── MOBILE MENU BUTTON ── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/images/veshwhite.png" alt="Вешалка" />
+  </div>
+  <nav>
+    <a href="index.html"> О проекте</a>
+    <a href="logo.html">Логотип</a>
+    <a href="color.html" class="active"> Цветовая палитра</a>
+    <a href="typography.html"> Типографика</a>
+    <a href="graphic.html"> Графика, паттерны</a>
+    <a href="photostyle.html">Фотостиль</a>
+    <a href="nositely.html"> Носители</a>
+    <a href="socialmedia.html">Социальные сети</a>
+  </nav>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="content">
+
+  <!-- ЗАГОЛОВОК -->
+  <section class="section reveal">
+    <h1 class="section-title">Цветовая палитра</h1>
+
+    <div class="color-intro reveal">
+      <p>Цветовая система «Вешалки» строится на спокойных, приглушённых оттенках с мягким контрастом.</p>
+      <p>В основе лежат нейтральные цвета, напоминающие ткань, бумагу, нитки и рабочие материалы fashion-среды. Холодные голубые оттенки добавляют ощущение воздуха, чистоты и визуальной лёгкости, а тёмные цвета помогают выстраивать контраст и структуру.</p>
+    </div>
+
+    <!-- ПАЛИТРА -->
+    <div class="color-grid reveal">
+
+      <!-- Graphite Black -->
+      <div class="color-card color-card--dark">
+        <div class="color-card-top">
+          <h3 class="color-name">Graphite Black</h3>
+          <p class="color-desc">Глубокий графитовый оттенок создаёт ощущение устойчивости, визуального баланса и помогает подчеркнуть контент.</p>
+        </div>
+        <div class="color-card-bottom">
+          <p>HEX: #302F2B</p>
+          <p>RGB: 48 / 47 / 43</p>
+          <p>CMYK: 0 / 2 / 10 / 81</p>
+          <p>Pantone: Black 7 C (closest)</p>
+        </div>
+      </div>
+
+      <!-- White -->
+      <div class="color-card color-card--white">
+        <div class="color-card-top">
+          <h3 class="color-name">White</h3>
+          <p class="color-desc">Белый используется как базовый фон и создаёт ощущение воздуха, чистоты и свободного пространства.</p>
+        </div>
+        <div class="color-card-bottom">
+          <p>HEX: #FFFFFF</p>
+          <p>RGB: 255 / 255 / 255</p>
+          <p>CMYK: 0 / 0 / 0 / 0</p>
+          <p>Pantone: White</p>
+        </div>
+      </div>
+
+      <!-- Dusty Blue -->
+      <div class="color-card color-card--dusty">
+        <div class="color-card-top">
+          <h3 class="color-name">Dusty Blue</h3>
+          <p class="color-desc">Приглушённый серо-голубой оттенок добавляет системе спокойствие и визуальную мягкость.</p>
+        </div>
+        <div class="color-card-bottom">
+          <p>HEX: #B2C5D1</p>
+          <p>RGB: 178 / 197 / 209</p>
+          <p>CMYK: 15 / 6 / 0 / 18</p>
+          <p>Pantone: 5445 C (closest)</p>
+        </div>
+      </div>
+
+      <!-- Mist Blue -->
+      <div class="color-card color-card--mist">
+        <div class="color-card-top">
+          <h3 class="color-name">Mist Blue</h3>
+          <p class="color-desc">Светлый голубовато-серый оттенок используется для фоновых поверхностей, карточек и второстепенных элементов.</p>
+        </div>
+        <div class="color-card-bottom">
+          <p>HEX: #D5E7F2</p>
+          <p>RGB: 213 / 231 / 242</p>
+          <p>CMYK: 12 / 5 / 0 / 5</p>
+          <p>Pantone: 656 C (closest)</p>
+        </div>
+      </div>
+
+      <!-- Accent Blue -->
+      <div class="color-card color-card--accent">
+        <div class="color-card-top">
+          <h3 class="color-name color-name--light">Accent Blue</h3>
+          <p class="color-desc color-desc--light">Более насыщенный голубой цвет используется для акцентов и выделения важных элементов. Он делает палитру более живой, сохраняя общую сдержанность.</p>
+        </div>
+        <div class="color-card-bottom color-card-bottom--light">
+          <p>HEX: #468DB7</p>
+          <p>RGB: 70 / 141 / 183</p>
+          <p>CMYK: 62 / 23 / 0 / 28</p>
+          <p>Pantone: 7697 C (closest)</p>
+        </div>
+      </div>
+
+      <!-- Deep Black -->
+      <div class="color-card color-card--black">
+        <div class="color-card-top">
+          <h3 class="color-name color-name--light">Deep Black</h3>
+          <p class="color-desc color-desc--light">Чистый чёрный используется для контрастных решений, типографики и усиления визуальной выразительности.</p>
+        </div>
+        <div class="color-card-bottom color-card-bottom--light">
+          <p>HEX: #000000</p>
+          <p>RGB: 0 / 0 / 0</p>
+          <p>CMYK: 0 / 0 / 0 / 100</p>
+          <p>Pantone: Black C</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/veshwhite.png" alt="" />
+      </div>
+      <div class="footer-info">
+        <strong>Выходные данные</strong>
+        Выполнила: Горынцева Анна, 5-мв-5.<br />
+        Год защиты: 2026<br />
+        Проект: Онлайн-медиа «Вешалка»
+      </div>
+      <div class="footer-contact">
+        <strong class="footer-contact-label">Вопросы?</strong>
+        <a href="mailto:umka.cu@mail.ru">umka.cu@mail.ru</a>
+      </div>
+      <div class="footer-copy">©2026 Горынцева Анна</div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="js/app.js"></script>
+</body>
+</html>

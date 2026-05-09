@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — typography.css
+   Стили для страницы «Фирменная типографика»
+   ═══════════════════════════════════════════════ */
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.typo-intro {
+  max-width: 780px;
+  margin-bottom: var(--gap-section);
+}
+.typo-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.typo-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── БЛОК ШРИФТОВОЙ СЕМЬИ ───────────────────── */
+.typo-family {
+  margin-bottom: var(--gap-section);
+}
+.typo-family-title {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--black);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+/* ─── СЕТКА КАРТОЧЕК ─────────────────────────── */
+.typo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.typo-cards--single {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ─── КАРТОЧКА ───────────────────────────────── */
+.typo-card {
+  background: #B2C5D1;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 24px 24px;
+  min-height: 380px;
+}
+.typo-card-top {
+  flex: 1;
+}
+
+/* ─── НАЧЕРТАНИЕ (THIN / REGULAR / BOLD) ─────── */
+.typo-weight {
+  font-family: 'GTEesti', sans-serif;
+  font-size: 28px;
+  color: var(--black);
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.typo-weight--bold {
+  font-weight: 700;
+}
+.typo-weight--script {
+  font-weight: normal;
+  font-size: 28px;
+}
+
+/* ─── ОБРАЗЦЫ ТЕКСТА ─────────────────────────── */
+.typo-specimen {
+  margin-bottom: 20px;
+}
+.typo-specimen p {
+  font-family: 'GTEesti', sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--black);
+  margin: 0 0 6px;
+  word-break: break-word;
+}
+.typo-specimen--thin p     { font-weight: 100; }
+.typo-specimen--regular p  { font-weight: 400; }
+.typo-specimen--bold p     { font-weight: 700; }
+
+.typo-nums {
+  font-family: 'GTEesti', sans-serif;
+  font-size: 13px;
+  color: var(--black);
+  margin: 0 0 4px !important;
+  letter-spacing: 0.05em;
+}
+.typo-spec {
+  font-family: 'GTEesti', sans-serif;
+  font-size: 13px;
+  color: var(--black);
+  margin: 0 !important;
+}
+
+/* Script вариант */
+.typo-specimen--script p {
+  font-family: 'FrenchKiss', 'KGScript', cursive;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.8;
+}
+.typo-nums--script {
+  font-family: 'FrenchKiss', 'KGScript', cursive !important;
+  font-weight: normal !important;
+  font-size: 24px !important;
+}
+.typo-spec--script {
+  font-family: 'FrenchKiss', 'KGScript', cursive !important;
+  font-weight: normal !important;
+  font-size: 24px !important;
+}
+
+/* ─── ОПИСАНИЕ ИСПОЛЬЗОВАНИЯ ─────────────────── */
+.typo-card-desc {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.typo-card-desc p {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--black);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .typo-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .typo-cards--single {
+    grid-template-columns: 1fr 1fr;
+  }
+  .typo-family-title {
+    font-size: 28px;
+  }
+  .typo-intro p {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .typo-cards,
+  .typo-cards--single {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .typo-card {
+    min-height: auto;
+    padding: 22px 18px 18px;
+  }
+  .typo-family-title {
+    font-size: 24px;
+  }
+  .typo-intro p {
+    font-size: 18px;
+  }
+  .typo-weight {
+    font-size: 24px;
+  }
+}

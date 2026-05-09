@@ -1,0 +1,160 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — color.css
+   Стили для страницы «Цветовая палитра»
+   ═══════════════════════════════════════════════ */
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.color-intro {
+  margin-bottom: var(--gap-section);
+  max-width: 780px;
+}
+.color-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 24px;
+}
+.color-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── СЕТКА КАРТОЧЕК ─────────────────────────── */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ─── БАЗОВАЯ КАРТОЧКА ───────────────────────── */
+.color-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  padding: 28px 28px 28px;
+}
+
+.color-card-top {
+  flex: 1;
+}
+.color-card-bottom {
+  margin-top: 32px;
+}
+
+/* Название цвета */
+.color-name {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.color-name--light {
+  color: var(--white);
+}
+
+/* Описание */
+.color-desc {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--black);
+}
+.color-desc--light {
+  color: var(--white);
+}
+
+/* Технические данные */
+.color-card-bottom p {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--black);
+  margin: 0;
+}
+.color-card-bottom--light p {
+  color: var(--white);
+}
+
+/* ─── ВАРИАНТЫ КАРТОЧЕК ──────────────────────── */
+
+/* Graphite Black */
+.color-card--dark {
+  background-color: #302F2B;
+}
+.color-card--dark .color-name,
+.color-card--dark .color-desc,
+.color-card--dark .color-card-bottom p {
+  color: var(--white);
+}
+
+/* White */
+.color-card--white {
+  background-color: #FFFFFF;
+}
+
+/* Dusty Blue */
+.color-card--dusty {
+  background-color: #B2C5D1;
+}
+
+/* Mist Blue */
+.color-card--mist {
+  background-color: #D5E7F2;
+}
+
+/* Accent Blue */
+.color-card--accent {
+  background-color: #468DB7;
+}
+
+/* Deep Black */
+.color-card--black {
+  background-color: #000000;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .color-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .color-card {
+    min-height: 380px;
+  }
+  .color-name {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .color-grid {
+    grid-template-columns: 1fr;
+  }
+  .color-card {
+    min-height: 300px;
+    padding: 24px;
+  }
+  .color-intro p {
+    font-size: 18px;
+  }
+  .color-name {
+    font-size: 20px;
+  }
+  .color-desc {
+    font-size: 14px;
+  }
+  .color-card-bottom p {
+    font-size: 12px;
+  }
+}

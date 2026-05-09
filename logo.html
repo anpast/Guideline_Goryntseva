@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вешалка — Логотип</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/logo.css" />
+</head>
+<body>
+ 
+<!-- ── MOBILE MENU BUTTON ── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+ 
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/images/veshwhite.png" alt="Вешалка" />
+  </div>
+  <nav>
+    <a href="index.html"> О проекте</a>
+    <a href="logo.html" class="active"> Логотип</a>
+    <a href="color.html">Цветовая палитра</a>
+    <a href="typography.html"> Типографика</a>
+    <a href="graphic.html"> Графика, паттерны</a>
+    <a href="photostyle.html"> Фотостиль</a>
+    <a href="nositely.html"> Носители</a>
+    <a href="socialmedia.html"> Социальные сети</a>
+  </nav>
+</aside>
+ 
+<!-- ── MAIN CONTENT ── -->
+<main class="content">
+ 
+  <!-- HERO — фон с горошком и заголовком -->
+  <section class="logo-hero reveal">
+    <img src="assets/images/fon.png" alt="Логотип" class="logo-hero-img" />
+  </section>
+ 
+  <!-- БЛОК: два текста -->
+  <section class="section logo-intro reveal">
+    <div class="logo-intro-grid">
+      <div class="logo-intro-left">
+        <p>Логотип «Вешалки» отражает основную идею проекта — соединение моды, ручной работы и современной digital-среды.</p>
+        <p>В его основе лежит сочетание выразительной типографики и визуальной метафоры вышивки, которая проходит через всю айдентику бренда.</p>
+      </div>
+      <div class="logo-intro-right">
+        <p>Название «Вешалка» было выбрано как понятный и узнаваемый образ, связанный с одеждой, гардеробом и повседневной жизнью. В контексте проекта вешалка становится символом опоры и структуры: она помогает организовать вещи, а медиа помогает ориентироваться в моде, трендах и визуальной культуре.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- СТРОЧКА -->
+  <div class="logo-strochka reveal">
+    <img src="assets/images/strochka.png" alt="" />
+  </div>
+ 
+  <!-- БЛОК: основная версия логотипа -->
+  <section class="section logo-main-block reveal">
+    <div class="logo-main-grid">
+      <div class="logo-main-left">
+        <p>Основная версия логотипа состоит из фирменного начертания «Вешалка» и подстрочника «медиа о моде». Подстрочник помогает точнее считывать сферу проекта и используется в большинстве основных носителей: на сайте, в социальных сетях, презентационных материалах и печатной продукции.</p>
+        <p>Фирменное начертание было создано на основе декоративного шрифта с последующей авторской обработкой. После подбора шрифта слово «Вешалка» было дополнительно стилизовано с помощью генеративных инструментов для создания эффекта машинной вышивки. Затем графика была переведена в векторный формат и доработана вручную для дальнейшего использования в айдентике.</p>
+      </div>
+      <div class="logo-main-right">
+        <div class="logo-main-img-wrap">
+          <img src="assets/images/osnovnoelogo.png" alt="Основная версия логотипа" />
+        </div>
+        <p>Такой подход позволил сохранить ощущение текстильности и ручной фактуры, оставаясь при этом в рамках цифровой визуальной системы.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- БЛОК: Разрешённые модификации -->
+  <section class="section reveal">
+    <h2 class="section-title">Разрешённые модификации</h2>
+    <div class="logo-mods-grid reveal">
+      <div class="logo-mod-item">
+        <div class="logo-mod-img">
+          <img src="assets/images/ok1.png" alt="Модификация 1" />
+        </div>
+        <p>Разрешается использование основного логотипа в фирменных цветах бренда, если это не нарушает читаемость.</p>
+      </div>
+      <div class="logo-mod-item">
+        <div class="logo-mod-img">
+          <img src="assets/images/ok2.png" alt="Модификация 2" />
+        </div>
+        <p>Разрешается использование основного логотипа без подстрочника, когда пространство ограничено или подстрочник становится плохо читаемым.</p>
+      </div>
+      <div class="logo-mod-item">
+        <div class="logo-mod-img">
+          <img src="assets/images/ok3.png" alt="Модификация 3" />
+        </div>
+        <p>Разрешается использование буквы «В» из логотипа, заключённой в окружность.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- БЛОК: Охранное поле -->
+  <section class="section reveal">
+    <h2 class="section-title">Охранное поле</h2>
+    <div class="logo-ohr-wrap reveal">
+      <button class="ohr-btn ohr-btn-prev" id="ohrPrev" aria-label="Назад">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="ohr-slides">
+        <img src="assets/images/ohr1.png" alt="Охранное поле 1" class="ohr-slide active" />
+        <img src="assets/images/ohr2.png" alt="Охранное поле 2" class="ohr-slide" />
+        <img src="assets/images/ohr3.png" alt="Охранное поле 3" class="ohr-slide" />
+      </div>
+      <button class="ohr-btn ohr-btn-next" id="ohrNext" aria-label="Вперёд">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="ohr-dots">
+      <span class="ohr-dot active" data-idx="0"></span>
+      <span class="ohr-dot" data-idx="1"></span>
+      <span class="ohr-dot" data-idx="2"></span>
+    </div>
+    <p class="ohr-caption reveal">Безопасная зона логотипа эквивалентна высоте буквы «a» со всех сторон.</p>
+  </section>
+ 
+  <!-- БЛОК: Минимальные размеры -->
+  <section class="section reveal">
+    <h2 class="section-title">Минимальные размеры</h2>
+    <div class="logo-min-grid reveal">
+      <div class="logo-min-item">
+        <img src="assets/images/min1.png" alt="Минимальный размер 1" />
+      </div>
+      <div class="logo-min-item">
+        <img src="assets/images/min2.png" alt="Минимальный размер 2" />
+      </div>
+      <div class="logo-min-item">
+        <img src="assets/images/min3.png" alt="Минимальный размер 3" />
+      </div>
+    </div>
+  </section>
+ 
+  <!-- БЛОК: Запрещается -->
+  <section class="section reveal">
+    <h2 class="section-title">Запрещается:</h2>
+    <div class="logo-zapr reveal">
+      <img src="assets/images/zapr.png" alt="Запрещённые использования логотипа" />
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/veshwhite.png" alt="" />
+      </div>
+      <div class="footer-info">
+        <strong>Выходные данные</strong>
+        Выполнила: Горынцева Анна, 5-мв-5.<br />
+        Год защиты: 2026<br />
+        Проект: Онлайн-медиа «Вешалка»
+      </div>
+      <div class="footer-contact">
+        <strong class="footer-contact-label">Вопросы?</strong>
+        <a href="mailto:umka.cu@mail.ru">umka.cu@mail.ru</a>
+      </div>
+      <div class="footer-copy">©2026 Горынцева Анна</div>
+    </div>
+  </footer>
+ 
+</main>
+ 
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+ 
+<script src="js/app.js"></script>
+<script src="js/logo.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — socialmedia.css
+   Стили для страницы «Социальные сети»
+   ═══════════════════════════════════════════════ */
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.sm-intro {
+  max-width: 760px;
+  margin-bottom: var(--gap-section);
+}
+.sm-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.sm-intro p:last-child { margin-bottom: 0; }
+.sm-intro strong {
+  font-weight: 700;
+}
+
+/* ─── БЛОК РАЗДЕЛА ───────────────────────────── */
+.sm-block {
+  margin-bottom: var(--gap-section);
+}
+.sm-block:last-child { margin-bottom: 0; }
+
+/* ─── ЗАГОЛОВОК РАЗДЕЛА ──────────────────────── */
+.sm-title {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--black);
+  margin-bottom: 36px;
+  line-height: 1.2;
+}
+
+/* ─── ДВА РАВНЫХ СТОЛБЦА ─────────────────────── */
+.sm-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Два столбца с картинкой справа (меньше) */
+.sm-two-col--asymm {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+/* ─── ОДИН СТОЛБЕЦ ───────────────────────────── */
+.sm-single-col {
+  max-width: 560px;
+}
+
+/* ─── ТЕКСТ В СТОЛБЦАХ ───────────────────────── */
+.sm-col p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.sm-col p:last-child { margin-bottom: 0; }
+
+.sm-single-col p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.sm-single-col p:last-child { margin-bottom: 0; }
+
+/* ─── СПИСОК ─────────────────────────────────── */
+.sm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+.sm-list li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--black);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.sm-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--black);
+}
+
+/* ─── КАРТИНКА В СТОЛБЦЕ ─────────────────────── */
+.sm-col--img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sm-col--img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .sm-intro p {
+    font-size: 20px;
+  }
+  .sm-title {
+    font-size: 28px;
+  }
+  .sm-col p,
+  .sm-single-col p,
+  .sm-list li {
+    font-size: 17px;
+  }
+  .sm-two-col {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sm-intro p {
+    font-size: 18px;
+  }
+  .sm-two-col,
+  .sm-two-col--asymm {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .sm-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .sm-col p,
+  .sm-single-col p,
+  .sm-list li {
+    font-size: 16px;
+  }
+  .sm-single-col {
+    max-width: 100%;
+  }
+  .sm-block {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sm-intro p {
+    font-size: 16px;
+  }
+  .sm-title {
+    font-size: 22px;
+  }
+}

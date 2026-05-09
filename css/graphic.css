@@ -1,0 +1,210 @@
+/* ═══════════════════════════════════════════════
+   ВЕШАЛКА — graphic.css
+   Стили для страницы «Графика & Паттерны»
+   ═══════════════════════════════════════════════ */
+
+/* ─── HERO — баннер ──────────────────────────── */
+.graph-hero {
+  margin-left: -80px;
+  margin-right: -80px;
+  width: calc(100% + 160px);
+}
+.graph-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
+.graph-intro {
+  max-width: 720px;
+}
+.graph-intro p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.graph-intro p:last-child { margin-bottom: 0; }
+
+/* ─── ПОДЗАГОЛОВОК РАЗДЕЛА ───────────────────── */
+.section-subtitle {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--black);
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* ─── ДВА СТОЛБЦА (текст + картинка) ─────────── */
+.graph-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.graph-col-text p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.graph-col-text p:last-child { margin-bottom: 0; }
+
+/* Маркированный список */
+.graph-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.graph-list li {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.graph-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--black);
+}
+
+/* Картинка в правом столбце */
+.graph-col-img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.graph-col-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── ПАТТЕРНЫ ───────────────────────────────── */
+.graph-patt-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.graph-patt-img-wrap {
+  flex: 1;
+  position: relative;
+}
+.graph-patt-img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+.graph-patt-img.active {
+  display: block;
+  animation: pattFadeIn 0.45s ease forwards;
+}
+@keyframes pattFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Кнопка «Сменить цвет» */
+.graph-patt-btn {
+  flex-shrink: 0;
+  align-self: center;
+  background: var(--white);
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.graph-patt-btn:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Текст под паттернами */
+.graph-patt-text p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+.graph-patt-text p:last-child { margin-bottom: 0; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .graph-hero {
+    margin-left: -48px;
+    margin-right: -48px;
+    width: calc(100% + 96px);
+  }
+  .graph-two-col {
+    gap: 40px;
+  }
+  .section-subtitle {
+    font-size: 28px;
+  }
+  .graph-intro p,
+  .graph-col-text p,
+  .graph-list li,
+  .graph-patt-text p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-hero {
+    margin-left: -28px;
+    margin-right: -28px;
+    width: calc(100% + 56px);
+  }
+  .graph-two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .graph-col-img {
+    justify-content: flex-start;
+  }
+  .graph-patt-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .graph-patt-btn {
+    align-self: flex-start;
+  }
+  .section-subtitle {
+    font-size: 24px;
+  }
+  .graph-intro p,
+  .graph-col-text p,
+  .graph-list li,
+  .graph-patt-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-hero {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+}

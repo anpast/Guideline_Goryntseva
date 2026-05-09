@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вешалка — Графика & Паттерны</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/graphic.css" />
+</head>
+<body>
+
+<!-- ── MOBILE MENU BUTTON ── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/images/veshwhite.png" alt="Вешалка" />
+  </div>
+  <nav>
+    <a href="index.html"> О проекте</a>
+    <a href="logo.html"> Логотип</a>
+    <a href="color.html">Цветовая палитра</a>
+    <a href="typography.html">Типографика</a>
+    <a href="graphic.html" class="active"> Графика, паттерны</a>
+    <a href="photostyle.html">Фотостиль</a>
+    <a href="nositely.html"> Носители</a>
+    <a href="socialmedia.html"> Социальные сети</a>
+  </nav>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="content">
+
+  <!-- HERO — баннер с паттерном -->
+  <section class="graph-hero reveal">
+    <img src="assets/images/graph.png" alt="Графика и Паттерны" class="graph-hero-img" />
+  </section>
+
+  <!-- ВВОДНЫЙ ТЕКСТ -->
+  <section class="section reveal">
+    <div class="graph-intro">
+      <p>Графическая система «Вешалки» продолжает основную идею бренда — тему вышивки, строчки и ручной работы.</p>
+      <p>Все элементы построены так, чтобы сохранять ощущение тактильности и живой фактуры. В графике остаётся лёгкая неровность и ощущение физического процесса, благодаря чему визуальный стиль выглядит менее стерильным и более тёплым.</p>
+      <p>Графические элементы используются в социальных сетях, digital-носителях, фирменных макетах и дополнительных коммуникационных материалах.</p>
+    </div>
+  </section>
+
+  <!-- ФИРМЕННАЯ ВЕШАЛКА -->
+  <section class="section" id="veshanka">
+    <h2 class="section-subtitle reveal">Фирменная вешалка</h2>
+    <div class="graph-two-col reveal">
+      <div class="graph-col-text">
+        <p>Её форма была построена на основе окружностей, что позволило добиться плавной и сбалансированной конструкции. После создания базового вектора элемент был обработан с помощью генеративных инструментов для имитации машинной строчки. Затем графика повторно переводилась в векторный формат и дорабатывалась вручную.</p>
+        <p>Фирменная вешалка используется в графических композициях, на носителях, в постах и сторис, в паттернах, как дополнительный фирменный маркер.</p>
+      </div>
+      <div class="graph-col-img">
+        <img src="assets/images/veshpostr.png" alt="Фирменная вешалка" />
+      </div>
+    </div>
+  </section>
+
+  <!-- СТРОЧКИ -->
+  <section class="section" id="strochki">
+    <h2 class="section-subtitle reveal">Строчки</h2>
+    <div class="graph-two-col reveal">
+      <div class="graph-col-text">
+        <p>Элементы создавались вручную на швейной машинке, после чего переводились в цифровой векторный формат. Благодаря этому линии сохраняют естественную пластику и небольшую неровность, характерную для настоящего шва.</p>
+        <p>В системе используются:</p>
+        <ul class="graph-list">
+          <li>тонкая прямая строчка;</li>
+          <li>декоративная строчка с более выраженным ритмом.</li>
+        </ul>
+        <p>Фирменная рамка построена на основе stitched-линии и поддерживает общую визуальную систему бренда.</p>
+        <p>Она используется:</p>
+        <ul class="graph-list">
+          <li>для оформления карточек;</li>
+          <li>выделения изображений;</li>
+          <li>оформления цитат и текстовых блоков;</li>
+          <li>в публикациях социальных сетей;</li>
+          <li>в digital-макетах.</li>
+        </ul>
+        <p>Рамка помогает структурировать композицию и добавляет визуальный ритм, сохраняя мягкость фирменного стиля.</p>
+      </div>
+      <div class="graph-col-img">
+        <img src="assets/images/ramka.png" alt="Фирменная рамка" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ПАТТЕРНЫ -->
+  <section class="section" id="patterns">
+    <h2 class="section-subtitle reveal">Паттерны</h2>
+    <div class="graph-patt-wrap reveal">
+      <div class="graph-patt-img-wrap">
+        <img src="assets/images/patt1.png" alt="Паттерн" class="graph-patt-img active" id="patt1" />
+        <img src="assets/images/patt2.png" alt="Паттерн" class="graph-patt-img" id="patt2" />
+        <img src="assets/images/patt3.png" alt="Паттерн" class="graph-patt-img" id="patt3" />
+      </div>
+      <button class="graph-patt-btn" id="pattToggle">Сменить цвет</button>
+    </div>
+    <div class="graph-patt-text reveal">
+      <p>Паттерны построены на основе повторяющихся круговых элементов и фирменной графики.</p>
+      <p>Они добавляют системе визуальный ритм и помогают делать макеты более узнаваемыми. Паттерны могут использоваться как самостоятельный фон или как дополнительный декоративный слой.</p>
+    </div>
+  </section>
+
+  <!-- НАШИВКА -->
+  <section class="section" id="nashivka">
+    <h2 class="section-subtitle reveal">Нашивка</h2>
+    <div class="graph-two-col reveal">
+      <div class="graph-col-text">
+        <p>Дополнительным графическим элементом является фирменная нашивка с логотипом.</p>
+        <p>Она визуально отсылает к текстильным биркам и элементам одежды, поддерживая тему ткани, швейного процесса и материальности бренда.</p>
+        <p>Нашивка используется:</p>
+        <ul class="graph-list">
+          <li>как декоративный элемент;</li>
+          <li>как визуальный акцент;</li>
+          <li>в качестве водяного знака в публикациях;</li>
+          <li>в постах и сторис;</li>
+          <li>в mockup-материалах и носителях.</li>
+        </ul>
+      </div>
+      <div class="graph-col-img">
+        <img src="assets/images/nashiv.png" alt="Нашивка" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/veshwhite.png" alt="" />
+      </div>
+      <div class="footer-info">
+        <strong>Выходные данные</strong>
+        Выполнила: Горынцева Анна, 5-мв-5.<br />
+        Год защиты: 2026<br />
+        Проект: Онлайн-медиа «Вешалка»
+      </div>
+      <div class="footer-contact">
+        <strong class="footer-contact-label">Вопросы?</strong>
+        <a href="mailto:umka.cu@mail.ru">umka.cu@mail.ru</a>
+      </div>
+      <div class="footer-copy">©2026 Горынцева Анна</div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="js/app.js"></script>
+<script src="js/graphic.js"></script>
+</body>
+</html>

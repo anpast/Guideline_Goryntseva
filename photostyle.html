@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вешалка — Фотостиль</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/photostyle.css" />
+</head>
+<body>
+
+<!-- ── MOBILE MENU BUTTON ── -->
+<button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/images/veshwhite.png" alt="Вешалка" />
+  </div>
+  <nav>
+    <a href="index.html">О проекте</a>
+    <a href="logo.html">Логотип</a>
+    <a href="color.html">Цветовая палитра</a>
+    <a href="typography.html">Типография</a>
+    <a href="graphic.html">Графика, паттерны</a>
+    <a href="photostyle.html" class="active">Фотостиль</a>
+    <a href="nositely.html">Носители</a>
+    <a href="socialmedia.html">Социальные сети</a>
+  </nav>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="content">
+
+  <!-- ЗАГОЛОВОК -->
+  <section class="section reveal">
+    <h1 class="section-title">Фотостиль</h1>
+
+    <!-- ВВОДНЫЙ ТЕКСТ -->
+    <div class="photo-intro reveal">
+      <p>Фотостиль «Вешалки» строится вокруг ощущения живой, естественной и ненарочитой эстетики. Визуальный контент не должен выглядеть слишком постановочно, глянцево или чрезмерно обработанно.</p>
+      <p>Основу визуального языка составляют фотографии, которые передают атмосферу момента, повседневность и ощущение реальной жизни. Это могут быть кадры, снятые на телефон, backstage-фотографии, зеркальные селфи, детали образов, предметная съёмка или фрагменты городской среды.</p>
+    </div>
+
+    <!-- КОЛЛАЖ -->
+    <div class="photo-collage reveal">
+      <img src="assets/images/photostyle.png" alt="Примеры фотостиля Вешалки" />
+    </div>
+
+    <!-- ТРИ КОЛОНКИ -->
+    <div class="photo-three-cols reveal">
+
+      <div class="photo-col">
+        <h3 class="photo-col-title">Живые кадры</h3>
+        <p class="photo-col-label">Допустимы:</p>
+        <ul class="photo-list">
+          <li>неидеальная композиция;</li>
+          <li>лёгкое размытие;</li>
+          <li>естественный свет;</li>
+          <li>кадры «на ходу»;</li>
+          <li>непостановочные позы.</li>
+        </ul>
+      </div>
+
+      <div class="photo-col">
+        <h3 class="photo-col-title">Минимальная обработка</h3>
+        <p class="photo-col-label">Не рекомендуется:</p>
+        <ul class="photo-list">
+          <li>чрезмерная ретушь;</li>
+          <li>сильное сглаживание кожи;</li>
+          <li>агрессивная цветокоррекция;</li>
+          <li>перенасыщенные цвета;</li>
+          <li>слишком контрастная обработка.</li>
+        </ul>
+      </div>
+
+      <div class="photo-col">
+        <h3 class="photo-col-title">Повседневная эстетика</h3>
+        <p class="photo-col-label">Это может быть:</p>
+        <ul class="photo-list">
+          <li>детали гардероба;</li>
+          <li>личные вещи;</li>
+          <li>кадры из города;</li>
+          <li>backstage;</li>
+          <li>фрагменты показов;</li>
+          <li>рабочие процессы;</li>
+          <li>фотографии, сделанные инфлюенсерами или авторами контента.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer reveal">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/veshwhite.png" alt="" />
+      </div>
+      <div class="footer-info">
+        <strong>Выходные данные</strong>
+        Выполнила: Горынцева Анна, 5-мв-5.<br />
+        Год защиты: 2026<br />
+        Проект: Онлайн-медиа «Вешалка»
+      </div>
+      <div class="footer-contact">
+        <strong class="footer-contact-label">Вопросы?</strong>
+        <a href="mailto:umka.cu@mail.ru">umka.cu@mail.ru</a>
+      </div>
+      <div class="footer-copy">©2026 Горынцева Анна</div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="js/app.js"></script>
+</body>
+</html>
