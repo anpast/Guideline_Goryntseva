@@ -2,6 +2,15 @@
    ВЕШАЛКА — photostyle.css
    Стили для страницы «Фотостиль»
    ═══════════════════════════════════════════════ */
+.photo-page-title{
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.0;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
 
 /* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
 .photo-intro {
@@ -98,6 +107,11 @@
 }
 
 @media (max-width: 768px) {
+  .photo-page-title{
+    font: size 48px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .photo-intro p {
     font-size: 18px;
   }
@@ -118,6 +132,12 @@
 }
 
 @media (max-width: 480px) {
+   .photo-page-title{
+    font-size:34px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
+
   .photo-intro p {
     font-size: 16px;
   }

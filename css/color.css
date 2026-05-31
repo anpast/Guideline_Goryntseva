@@ -2,7 +2,15 @@
    ВЕШАЛКА — color.css
    Стили для страницы «Цветовая палитра»
    ═══════════════════════════════════════════════ */
-
+.color-page-title{
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.0;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
 /* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
 .color-intro {
   margin-bottom: var(--gap-section);
@@ -16,7 +24,7 @@
   margin-bottom: 24px;
 }
 .color-intro p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 100;
 }
 
 /* ─── СЕТКА КАРТОЧЕК ─────────────────────────── */
@@ -138,6 +146,11 @@
 
 /* MOBILE */
 @media (max-width: 640px) {
+  .color-page-title{
+    font-size:48px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .color-grid {
     grid-template-columns: 1fr;
   }
@@ -157,4 +170,13 @@
   .color-card-bottom p {
     font-size: 12px;
   }
+}
+
+@media (max-width: 480px) {
+  .graph-page-title{
+    font-size:34px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
+  .graph-subtitle { font-size: 24px; }
 }

@@ -1,82 +1,61 @@
 /* ═══════════════════════════════════════════════
    ВЕШАЛКА — graphic.css
-   Стили для страницы «Графика & Паттерны»
    ═══════════════════════════════════════════════ */
 
-/* ─── HERO — баннер ──────────────────────────── */
-.graph-hero {
-  margin-left: -80px;
-  margin-right: -80px;
-  width: calc(100% + 160px);
-}
-.graph-hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
+/* ─── КРУПНЫЙ ЗАГОЛОВОК СТРАНИЦЫ ─────────────── */
+.graph-page-title{
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.0;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 /* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
 .graph-intro {
-  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lh-body, 36px);
 }
 .graph-intro p {
-  font-size: 24px;
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
   font-weight: 400;
-  line-height: 1.6;
   color: var(--black);
-  margin-bottom: 20px;
+  max-width: 700px;
 }
-.graph-intro p:last-child { margin-bottom: 0; }
 
 /* ─── ПОДЗАГОЛОВОК РАЗДЕЛА ───────────────────── */
-.section-subtitle {
+.graph-subtitle {
   font-family: 'GTEesti', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 40px;
+  line-height: 48px;
   color: var(--black);
-  margin-bottom: 40px;
-  line-height: 1.2;
+  margin-bottom: 50px;
 }
 
-/* ─── ДВА СТОЛБЦА (текст + картинка) ─────────── */
+/* ─── ДВА СТОЛБЦА ────────────────────────────── */
 .graph-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
 }
+.graph-col-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lh-body, 36px);
+}
 .graph-col-text p {
-  font-size: 24px;
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
   font-weight: 400;
-  line-height: 1.6;
   color: var(--black);
-  margin-bottom: 20px;
+  margin: 0;
 }
-.graph-col-text p:last-child { margin-bottom: 0; }
-
-/* Маркированный список */
-.graph-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-.graph-list li {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
-  padding-left: 18px;
-  position: relative;
-  margin-bottom: 4px;
-}
-.graph-list li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: var(--black);
-}
-
-/* Картинка в правом столбце */
 .graph-col-img {
   display: flex;
   align-items: flex-start;
@@ -84,21 +63,52 @@
 }
 .graph-col-img img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ─── ПАТТЕРНЫ ───────────────────────────────── */
-.graph-patt-wrap {
+/* ─── СПИСОК ─────────────────────────────────── */
+.graph-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  margin-bottom: 40px;
+  flex-direction: column;
+  gap: 4px;
 }
-.graph-patt-img-wrap {
-  flex: 1;
+.graph-list li {
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
+  font-weight: 400;
+  color: var(--black);
+  padding-left: 20px;
   position: relative;
+}
+.graph-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+}
+
+/* ─── ПАТТЕРНЫ ───────────────────────────────── */
+/* Левая: картинки в сетке 2 колонки + кнопка снизу
+   Правая: текст */
+.graph-patt-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.graph-patt-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Две картинки в строку */
+.graph-patt-imgs {
+  position: relative;
+  width: 100%;
 }
 .graph-patt-img {
   display: none;
@@ -107,25 +117,25 @@
 }
 .graph-patt-img.active {
   display: block;
-  animation: pattFadeIn 0.45s ease forwards;
+  animation: pattFade 0.4s ease forwards;
 }
-@keyframes pattFadeIn {
+@keyframes pattFade {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-/* Кнопка «Сменить цвет» */
+/* Кнопка под картинками */
 .graph-patt-btn {
-  flex-shrink: 0;
-  align-self: center;
+  align-self: flex-start;
   background: var(--white);
-  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border: 1.5px solid rgba(0,0,0,0.2);
   border-radius: 2px;
   font-family: 'GTEesti', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1;
   color: var(--black);
-  padding: 10px 22px;
+  padding: 10px 24px;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
   white-space: nowrap;
@@ -135,76 +145,47 @@
   border-color: var(--blue);
 }
 
-/* Текст под паттернами */
-.graph-patt-text p {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
-  max-width: 720px;
-  margin-bottom: 20px;
+/* Правый столбец паттернов */
+.graph-patt-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lh-body, 36px);
 }
-.graph-patt-text p:last-child { margin-bottom: 0; }
+.graph-patt-right p {
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
+  font-weight: 400;
+  color: var(--black);
+  margin: 0;
+}
 
 /* ═══════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .graph-hero {
-    margin-left: -48px;
-    margin-right: -48px;
-    width: calc(100% + 96px);
-  }
-  .graph-two-col {
-    gap: 40px;
-  }
-  .section-subtitle {
-    font-size: 28px;
-  }
-  .graph-intro p,
-  .graph-col-text p,
-  .graph-list li,
-  .graph-patt-text p {
-    font-size: 20px;
-  }
+  .graph-page-title { font-size: 72px; }
+  .graph-subtitle { font-size: 32px; line-height: 40px; }
+  .graph-two-col,
+  .graph-patt-block { gap: 40px; }
 }
 
 @media (max-width: 768px) {
-  .graph-hero {
-    margin-left: -28px;
-    margin-right: -28px;
-    width: calc(100% + 56px);
-  }
-  .graph-two-col {
+  .graph-page-title { font-size: 52px; line-height: 1.05; }
+  .graph-subtitle { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
+  .graph-two-col,
+  .graph-patt-block {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
-  .graph-col-img {
-    justify-content: flex-start;
-  }
-  .graph-patt-wrap {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .graph-patt-btn {
-    align-self: flex-start;
-  }
-  .section-subtitle {
-    font-size: 24px;
-  }
-  .graph-intro p,
-  .graph-col-text p,
-  .graph-list li,
-  .graph-patt-text p {
-    font-size: 18px;
-  }
+  .graph-col-img { justify-content: flex-start; }
 }
 
 @media (max-width: 480px) {
-  .graph-hero {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+  .graph-page-title{
+    font-size:34px;
+    margin-top:60px;
+    margin-bottom:50px;
   }
+  .graph-subtitle { font-size: 24px; }
 }

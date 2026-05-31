@@ -1,309 +1,173 @@
-/* ═══════════════════════════════════════════════
-   ВЕШАЛКА — logo.css
-   Стили только для страницы «Логотип»
-   ═══════════════════════════════════════════════ */
- 
-/* ─── HERO — фон с горошком ──────────────────── */
-.logo-hero {
-  width: 100%;
-  /* Компенсируем padding content-блока, чтобы картинка шла от края */
-  margin-left: -80px;
-  margin-right: -80px;
-  width: calc(100% + 160px);
-  margin-bottom: 0;
+.logo-main{
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
 }
-.logo-hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
- 
-/* ─── ВВОДНЫЙ ТЕКСТ — два столбца ────────────── */
-.logo-intro {
-  padding-top: var(--gap-section);
-}
-.logo-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-.logo-intro-left p,
-.logo-intro-right p {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
+.logo-page-title{
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.0;
   color: var(--black);
-  margin-bottom: 24px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  margin-top: 100px;
 }
-.logo-intro-left p:last-child,
-.logo-intro-right p:last-child {
-  margin-bottom: 0;
+
+.logo-intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
 }
- 
-/* ─── СТРОЧКА ────────────────────────────────── */
-.logo-strochka {
-  margin-top: var(--gap-section);
-  width: 100%;
+
+.logo-intro p{
+  margin-bottom:36px;
 }
-.logo-strochka img {
-  display: block;
-  width: 100%;
-  height: auto;
+
+.logo-stitch{
+  width:100%;
+  display:block;
 }
- 
-/* ─── ОСНОВНАЯ ВЕРСИЯ — сетка 2:1 ───────────── */
-.logo-main-block {
-  padding-top: var(--gap-section);
+
+.logo-main p{
+  margin-bottom:36px;
 }
-.logo-main-grid {
-  display: grid;
-  /* левые 2 части, правая 1 часть */
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
-  align-items: start;
+
+
+.logo-main-image img{
+  width:100%;
+  max-width:380px;
 }
-.logo-main-left p {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
-  margin-bottom: 32px;
+
+.mods-grid{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
 }
-.logo-main-left p:last-child {
-  margin-bottom: 0;
+
+.mod-item{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:32px;
+  align-items:center;
 }
-.logo-main-right {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+
+.mod-item img{
+  width:100%;
+  display:block;
 }
-.logo-main-img-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
+
+.ohr-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
 }
-.logo-main-right p {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
+
+.ohr-slider{
+  position:relative;
+  width:100%;
+  max-width:700px;
 }
- 
-/* ─── РАЗРЕШЁННЫЕ МОДИФИКАЦИИ ────────────────── */
-.logo-mods-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  margin-top: var(--gap-block);
+
+.ohr-slide{
+  width:100%;
+  display:none;
 }
-.logo-mod-item {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+.ohr-slide.active{
+  display:block;
 }
-.logo-mod-img {
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 24px;
-  min-height: 180px;
+
+.slider-btn{
+  width:56px;
+  height:56px;
+  border:none;
+  border-radius:50%;
+  background:var(--blue);
+  cursor:pointer;
+  font-size:34px;
+  color:white;
+  transition:.2s;
 }
-.logo-mod-img img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+.slider-btn:hover{
+  transform:translateY(-2px);
 }
-.logo-mod-item p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
+
+.ohr-text{
+  text-align:center;
+  margin-top:24px;
 }
- 
-/* ─── ОХРАННОЕ ПОЛЕ — слайдер ────────────────── */
-.logo-ohr-wrap {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: var(--gap-block);
+
+.min-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
 }
-.ohr-slides {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
+
+.min-grid img{
+  width:100%;
+  display:block;
 }
-.ohr-slide {
-  display: none;
-  width: 100%;
-  height: auto;
+
+.min-grid img:last-child{
+  grid-column:1;
 }
-.ohr-slide.active {
-  display: block;
-  animation: ohrFadeIn 0.45s ease forwards;
+
+.zapr-img{
+  width:100%;
+  display:block;
 }
-@keyframes ohrFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+
+.footer {
+  margin-top: var(--gap-before-title);
+
+  margin-left: calc(-1 * var(--content-pad));
+  margin-right: calc(-1 * var(--content-pad));
+
+  background: var(--dark);
+  padding: 48px var(--content-pad);
 }
- 
-.ohr-btn {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: none;
-  background: var(--blue);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.2s;
-}
-.ohr-btn:hover {
-  background: #9db5c3;
-  transform: scale(1.05);
-}
-.ohr-btn svg {
-  width: 22px;
-  height: 22px;
-  stroke: var(--black);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
- 
-/* Точки-индикаторы */
-.ohr-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-.ohr-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.ohr-dot.active {
-  background: var(--black);
-}
- 
-.ohr-caption {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.55);
-  text-align: center;
-}
- 
-/* ─── МИНИМАЛЬНЫЕ РАЗМЕРЫ ────────────────────── */
-.logo-min-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  margin-top: var(--gap-block);
-  align-items: end;
-}
-.logo-min-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
- 
-/* ─── ЗАПРЕЩАЕТСЯ ────────────────────────────── */
-.logo-zapr {
-  margin-top: var(--gap-block);
-}
-.logo-zapr img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
- 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════════ */
- 
-/* TABLET */
-@media (max-width: 1024px) {
-  .logo-hero {
-    margin-left: -48px;
-    margin-right: -48px;
-    width: calc(100% + 96px);
+@media(max-width:768px){
+
+  .logo-page-title{
+    font-size:64px;
+    margin-top:100px;
+    margin-bottom:50px;
   }
-  .logo-intro-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+
+  .logo-intro,
+  .logo-main,
+  .mod-item{
+    grid-template-columns:1fr;
   }
-  .logo-main-grid {
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
+
+  .ohr-wrap{
+    gap:12px;
   }
-  .logo-mods-grid {
-    gap: 32px;
+
+  .slider-btn{
+    width:44px;
+    height:32px;
+    font-size:24px;
   }
-  .logo-min-grid {
-    gap: 32px;
+
+  .min-grid{
+    grid-template-columns:1fr;
+  }
+
+  .min-grid img:last-child{
+    grid-column:auto;
   }
 }
- 
-/* MOBILE */
-@media (max-width: 768px) {
-  .logo-hero {
-    margin-left: -28px;
-    margin-right: -28px;
-    width: calc(100% + 56px);
-  }
-  .logo-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .logo-main-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .logo-mods-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .logo-min-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .logo-mod-img {
-    min-height: 140px;
-  }
-  .ohr-btn {
-    width: 40px;
-    height: 40px;
-  }
-  .ohr-btn svg {
-    width: 18px;
-    height: 18px;
-  }
-}
- 
 @media (max-width: 480px) {
-  .logo-hero {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+  .logo-page-title{
+    font-size:34px;
+    margin-top:100px;
+    margin-bottom:50px;
   }
-  .logo-intro-left p,
-  .logo-intro-right p,
-  .logo-main-left p,
-  .logo-main-right p {
-    font-size: 18px;
-  }
-  .logo-mod-item p,
-  .ohr-caption {
-    font-size: 16px;
+  .graph-subtitle { font-size: 24px; }
+  .logo-stitch { margin: 10, 0, 0;
   }
 }

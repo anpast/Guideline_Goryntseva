@@ -1,105 +1,103 @@
 /* ═══════════════════════════════════════════════
    ВЕШАЛКА — nositely.css
-   Стили для страницы «Носители»
    ═══════════════════════════════════════════════ */
 
-/* ─── HERO ───────────────────────────────────── */
-.nosit-hero {
-  margin-left: -80px;
-  margin-right: -80px;
-  width: calc(100% + 160px);
-}
-.nosit-hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
+/* ─── ЗАГОЛОВОК СТРАНИЦЫ ─────────────────────── */
+.nosit-page-title {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.0;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 /* ─── ВВОДНЫЙ ТЕКСТ ──────────────────────────── */
 .nosit-intro {
-  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lh-body, 36px);
+  max-width: 700px;
 }
 .nosit-intro p {
-  font-size: 24px;
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
   font-weight: 400;
-  line-height: 1.6;
   color: var(--black);
-  margin-bottom: 20px;
 }
-.nosit-intro p:last-child { margin-bottom: 0; }
 
-/* ─── ЗАГОЛОВОК РАЗДЕЛА ──────────────────────── */
-.nosit-section-title {
+/* ─── ПОДЗАГОЛОВОК НОСИТЕЛЯ ──────────────────── */
+.nosit-subtitle {
   font-family: 'GTEesti', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 40px;
+  line-height: 48px;
   color: var(--black);
-  margin-bottom: 48px;
-  line-height: 1.2;
+  margin-bottom: 50px;
 }
 
-/* ─── ЭЛЕМЕНТ: ТЕКСТ + КАРТИНКА ──────────────── */
+/* ─── БЛОК НОСИТЕЛЯ ──────────────────────────── */
+/* Левая: картинка + кнопка под ней
+   Правая: текст */
 .nosit-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
-  margin-bottom: 72px;
-}
-.nosit-item:last-child {
-  margin-bottom: 0;
+  align-items: start;
 }
 
-/* Текстовый столбец */
-.nosit-item-text p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--black);
-  margin-bottom: 16px;
-}
-.nosit-item-text p:last-child { margin-bottom: 0; }
-
-/* Картинка */
+/* Левый столбец */
 .nosit-item-img {
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nosit-item-img img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ─── ШАБЛОНЫ ПОСТОВ ─────────────────────────── */
-.nosit-posts-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 48px;
-}
-.nosit-posts-intro-col p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--black);
-  margin-bottom: 16px;
-}
-.nosit-posts-intro-col p:last-child { margin-bottom: 0; }
-
-/* Сетка постов — 3 колонки с адаптивным переносом */
-.nosit-posts-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 }
-.nosit-post-item img {
+
+/* Обёртка картинки */
+.nosit-toggle-wrap {
+  width: 100%;
+}
+.nosit-img {
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity 0.4s ease;
+}
+
+/* Кнопка переключения */
+.nosit-btn {
+  background: var(--white);
+  border: 1.5px solid rgba(0,0,0,0.2);
   border-radius: 2px;
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--black);
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.nosit-btn:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Правый столбец */
+.nosit-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lh-body, 36px);
+}
+.nosit-item-text p {
+  font-size: var(--fz-body, 26px);
+  line-height: var(--lh-body, 36px);
+  font-weight: 400;
+  color: var(--black);
+  margin: 0;
 }
 
 /* ═══════════════════════════════════════════════
@@ -107,68 +105,22 @@
    ═══════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .nosit-hero {
-    margin-left: -48px;
-    margin-right: -48px;
-    width: calc(100% + 96px);
-  }
-  .nosit-item {
-    gap: 40px;
-  }
-  .nosit-section-title {
-    font-size: 28px;
-  }
-  .nosit-intro p,
-  .nosit-item-text p,
-  .nosit-posts-intro-col p {
-    font-size: 18px;
-  }
-  .nosit-posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .nosit-page-title { font-size: 72px; }
+  .nosit-subtitle { font-size: 32px; line-height: 40px; }
+  .nosit-item { gap: 40px; }
 }
 
 @media (max-width: 768px) {
-  .nosit-hero {
-    margin-left: -28px;
-    margin-right: -28px;
-    width: calc(100% + 56px);
-  }
+  .nosit-page-title { font-size: 52px; line-height: 1.05; }
+  .nosit-subtitle { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
   .nosit-item {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 56px;
-  }
-  .nosit-item-img {
-    justify-content: flex-start;
-  }
-  .nosit-posts-intro {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .nosit-posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-  .nosit-section-title {
-    font-size: 24px;
-    margin-bottom: 32px;
-  }
-  .nosit-intro p,
-  .nosit-item-text p,
-  .nosit-posts-intro-col p {
-    font-size: 16px;
+    gap: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .nosit-hero {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
-  }
-  .nosit-posts-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  .nosit-page-title { font-size: 40px; }
+  .nosit-subtitle { font-size: 24px; }
+  .nosit-btn { font-size: 14px; padding: 8px 18px; }
 }
