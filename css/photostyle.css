@@ -108,7 +108,7 @@
 
 @media (max-width: 768px) {
   .photo-page-title{
-    font: size 48px;
+    font-size:48px;
     margin-top:60px;
     margin-bottom:50px;
   }

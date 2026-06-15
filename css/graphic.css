@@ -171,7 +171,11 @@
 }
 
 @media (max-width: 768px) {
-  .graph-page-title { font-size: 52px; line-height: 1.05; }
+  .graph-page-title { 
+    font-size:48px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .graph-subtitle { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
   .graph-two-col,
   .graph-patt-block {

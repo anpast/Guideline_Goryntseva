@@ -132,7 +132,11 @@
 }
 
 @media (max-width: 768px) {
-  .typo-page-title { font-size: 52px; line-height: 1.05; }
+  .typo-page-title {
+    font-size:48px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .typo-family-title { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
   .typo-intro {
     grid-template-columns: 1fr;
@@ -149,6 +153,10 @@
 }
 
 @media (max-width: 480px) {
-  .typo-page-title { font-size: 40px; }
+  .typo-page-title {
+    font-size:34px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .typo-family-title { font-size: 24px; }
 }

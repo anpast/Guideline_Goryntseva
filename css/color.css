@@ -145,7 +145,7 @@
 }
 
 /* MOBILE */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .color-page-title{
     font-size:48px;
     margin-top:60px;

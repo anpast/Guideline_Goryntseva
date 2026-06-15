@@ -111,7 +111,11 @@
 }
 
 @media (max-width: 768px) {
-  .nosit-page-title { font-size: 52px; line-height: 1.05; }
+  .nosit-page-title {
+    font-size:48px;
+    margin-top:60px;
+    margin-bottom:50px;
+  }
   .nosit-subtitle { font-size: 28px; line-height: 36px; margin-bottom: 32px; }
   .nosit-item {
     grid-template-columns: 1fr;
@@ -120,7 +124,10 @@
 }
 
 @media (max-width: 480px) {
-  .nosit-page-title { font-size: 40px; }
+  .nosit-page-title {     
+    font-size:34px;
+    margin-top:60px;
+    margin-bottom:50px; }
   .nosit-subtitle { font-size: 24px; }
   .nosit-btn { font-size: 14px; padding: 8px 18px; }
 }
