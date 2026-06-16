@@ -260,7 +260,7 @@ p {
 /* ─── КЛЮЧЕВОЕ СООБЩЕНИЕ ─────────────────────── */
 .keymsg-wrap {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .keymsg-wrap .circle-img {
   max-width: 340px;
@@ -483,7 +483,7 @@ p {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .col--img-right { align-items: flex-start; }
+
   .col--img-right img { max-width: 140px; }
  
   .circle-img { max-width: 260px; }

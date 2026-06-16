@@ -77,4 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ─── АККОРДЕОН ──────────────────────────────── */
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    // Закрываем все
+    document.querySelectorAll('.accordion-item.open').forEach(el => {
+      el.classList.remove('open');
+    });
+    // Открываем кликнутый если был закрыт
+    if (!isOpen) item.classList.add('open');
+  });
+});
 });

@@ -114,3 +114,74 @@
    }
   .sm-subtitle { font-size: 24px; }
 }
+
+/* ─── АККОРДЕОН ──────────────────────────────── */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.accordion-item {
+  background: var(--blue);
+  overflow: hidden;
+}
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.accordion-btn span {
+  font-family: 'GTEesti', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--black);
+}
+.accordion-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  color: var(--black);
+  transition: transform 0.35s ease;
+}
+.accordion-item.open .accordion-icon {
+  transform: rotate(180deg);
+}
+.accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+.accordion-item.open .accordion-body {
+  grid-template-rows: 1fr;
+}
+.accordion-body-inner {
+  overflow: hidden;
+  padding: 0 28px;
+}
+.accordion-item.open .accordion-body-inner {
+  padding: 0 28px 28px;
+}
+.accordion-body-inner p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.accordion-body-inner p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .accordion-btn span { font-size: 20px; line-height: 28px; }
+  .accordion-body-inner { padding: 0 20px; }
+  .accordion-item.open .accordion-body-inner { padding: 0 20px 20px; }
+}

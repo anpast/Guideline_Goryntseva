@@ -32,4 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.nosit.img').forEach(img =>{
+    const mockSrc = img.getAttribute('data-mock');
+    if (mockSrc) {
+      const preload = new Image();
+      preload.src = mockSrc;
+    }
+  });
 });
