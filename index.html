@@ -101,20 +101,41 @@
 
     <!-- ЦЕЛЕВАЯ АУДИТОРИЯ -->
     <section class="section" id="audience">
-      <h2 class="section-title reveal">Целевая аудитория</h2>
-      <div class="two-col two-col--center reveal">
-        <div class="col">
-          <p>Проект ориентирован на&nbsp;девушек, живущих в&nbsp;крупных городах и&nbsp;работающих в&nbsp;разных сферах – от&nbsp;креативных индустрий до&nbsp;образования и&nbsp;IT.</p>
-          <p>Они следят за&nbsp;модой, но&nbsp;не&nbsp;хотят растворяться в&nbsp;трендах. Им&nbsp;важно выглядеть современно, при этом оставаться собой. Они ценят эстетику, но&nbsp;живут в&nbsp;реальном ритме, где есть работа, встречи и&nbsp;повседневные задачи.</p>
-        </div>
-        <div class="col col--circle">
-          <div class="circle-wrap">
-            <img class="circle-img" src="assets/images/circle.png" alt="" />
-            <span class="circle-text">девушки<br />20–35 лет</span>
-          </div>
-        </div>
-      </div>
-    </section>
+  <h2 class="section-title reveal">Целевая аудитория</h2>
+
+  <!-- Карточки -->
+  <div class="ca-cards reveal">
+    <div class="ca-card" data-popup="ca-popup-1">
+      <img src="assets/images/ca1.png" alt="Катя, 20 лет" />
+    </div>
+    <div class="ca-card" data-popup="ca-popup-2">
+      <img src="assets/images/ca2.png" alt="Маша, 26 лет" />
+    </div>
+  </div>
+
+  <!-- Текст под карточками -->
+  <div class="two-col reveal">
+    <div class="col">
+      <p>Проект ориентирован на&nbsp;девушек, живущих в&nbsp;крупных городах и&nbsp;работающих в&nbsp;разных сферах — от&nbsp;креативных индустрий до&nbsp;образования и&nbsp;IT. Они следят за&nbsp;модой, но&nbsp;не&nbsp;хотят растворяться в&nbsp;трендах.</p>
+    </div>
+    <div class="col">
+      <p>Им&nbsp;важно выглядеть современно, при этом оставаться собой. Они ценят эстетику, но&nbsp;живут в&nbsp;реальном ритме, где есть работа, встречи и&nbsp;повседневные задачи.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ПОПАПЫ -->
+<div class="ca-popup-overlay" id="ca-overlay"></div>
+
+<div class="ca-popup" id="ca-popup-1">
+  <button class="ca-popup-close" aria-label="Закрыть">✕</button>
+  <img src="assets/images/katya.png" alt="Катя" />
+</div>
+
+<div class="ca-popup" id="ca-popup-2">
+  <button class="ca-popup-close" aria-label="Закрыть">✕</button>
+  <img src="assets/images/masha.png" alt="Маша" />
+</div>
 
     <!-- СТИЛЬ ОБЩЕНИЯ -->
     <section class="section" id="tone">

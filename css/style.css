@@ -76,7 +76,7 @@
 }
 html { scroll-behavior: smooth; }
 body {
-
+  display: flex;
   min-height: 100vh;
   font-family: 'GTEesti', sans-serif;
   font-weight: 400;
@@ -150,7 +150,7 @@ body {
    CONTENT — 12 колонок, с 1 кол. воздуха с каждой стороны
    ═══════════════════════════════════════════════ */
 .content {
-  margin-left: var(--sidebar-w);
+  margin-left: 25vw;
   flex: 1;
   background: var(--white);
   /* Внешний контейнер занимает 12 колонок */
@@ -429,6 +429,7 @@ p {
     --fz-title: 48px;
     --lh-title: 56px;
   }
+      .content { margin-left: 220px; }
   .sidebar nav a {
     font-size: 22px;
     line-height: 32px;
@@ -448,6 +449,7 @@ p {
     --gap-after-title: 36px;
     --content-pad: 24px;
   }
+       .content { margin-left: 0; }
  
   .menu-toggle { display: flex; }
   .sidebar-overlay {
@@ -511,5 +513,107 @@ p {
   .circle-text {
     font-size: 15px;
     line-height: 14px;
+  }
+}
+
+/* ─── ЦЕЛЕВАЯ АУДИТОРИЯ — карточки ──────────── */
+.ca-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+.ca-card {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ca-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Эффект при наведении — десктоп */
+.ca-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+}
+/* Эффект для тач — подсвечиваем при нажатии */
+.ca-card:active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+/* Пульсирующая подсказка на мобиле */
+@media (hover: none) {
+  .ca-card::after {
+    content: 'Нажмите';
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(0,0,0,0.4);
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* ─── ПОПАП — оверлей ────────────────────────── */
+.ca-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 400;
+}
+.ca-popup-overlay.open { display: block; }
+
+/* ─── ПОПАП — окно ───────────────────────────── */
+.ca-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 500;
+  background: var(--white);
+  max-width: 900px;
+  width: 90%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.ca-popup.open {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.ca-popup img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ca-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  transition: background 0.2s;
+  z-index: 10;
+}
+.ca-popup-close:hover {
+  background: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .ca-cards {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
